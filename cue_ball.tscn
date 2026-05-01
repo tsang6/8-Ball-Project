@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://clr4h5iabo1w5"]
+
+[ext_resource type="PackedScene" uid="uid://cqtiq4uwo33ku" path="res://Models/cue ball.blend" id="1_6mird"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="CueBall" type="RigidBody3D" unique_id=745721178]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1471107593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="cue ball" parent="." unique_id=855709514 instance=ExtResource("1_6mird")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.091918394, 0)

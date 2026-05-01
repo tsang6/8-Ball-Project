@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ccughttjd5wmg"]
+
+[ext_resource type="PackedScene" uid="uid://0c0tp068pwj8" path="res://Models/ten ball.blend" id="1_40bvy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="TenBall" type="RigidBody3D" unique_id=513320839]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1745316583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="ten ball" parent="." unique_id=448027990 instance=ExtResource("1_40bvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09107275, 0)

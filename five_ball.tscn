@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://pe0ym77gfjae"]
+
+[ext_resource type="PackedScene" uid="uid://3ywqjxylw5qd" path="res://Models/five ball.blend" id="1_y8yfu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="FiveBall" type="RigidBody3D" unique_id=652653894]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=131562069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="five ball" parent="." unique_id=1224548529 instance=ExtResource("1_y8yfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09103221, 0)

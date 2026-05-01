@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dl6t1m3byuq36"]
+
+[ext_resource type="PackedScene" uid="uid://drrsjhwhfxbq4" path="res://Models/two ball.blend" id="1_oehh8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="TwoBall" type="RigidBody3D" unique_id=1459931399]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=702866884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="two ball" parent="." unique_id=191923666 instance=ExtResource("1_oehh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09121862, 0)

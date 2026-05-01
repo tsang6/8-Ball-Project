@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://gbb470ilon8w"]
+
+[ext_resource type="PackedScene" uid="uid://bovsebfx28id7" path="res://Models/seven ball.blend" id="1_4e8lt"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="SevenBall" type="RigidBody3D" unique_id=196383085]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=615741249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="seven ball" parent="." unique_id=490261104 instance=ExtResource("1_4e8lt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09121522, 0)

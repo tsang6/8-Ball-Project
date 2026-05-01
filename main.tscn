@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://qfoo2hhmgi17"]
+
+[ext_resource type="Script" uid="uid://chrywsekkgpwx" path="res://cue.gd" id="1_82xsv"]
+[ext_resource type="Script" uid="uid://d20242wipnhp8" path="res://main.gd" id="1_getpj"]
+[ext_resource type="Script" uid="uid://lcrifomedtu8" path="res://static_body_3d.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cvq2bpvhjpk14" path="res://pool table.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://2dxdbjo228ao" path="res://Models/pool cue.blend" id="2_getpj"]
+[ext_resource type="PackedScene" uid="uid://clr4h5iabo1w5" path="res://cue_ball.tscn" id="3_074og"]
+[ext_resource type="PackedScene" uid="uid://b8vyr0ol72d78" path="res://one_ball.tscn" id="4_cegan"]
+[ext_resource type="PackedScene" uid="uid://dl6t1m3byuq36" path="res://two_ball.tscn" id="5_82xsv"]
+[ext_resource type="PackedScene" uid="uid://3kqkh4uqy7ea" path="res://three_ball.tscn" id="6_getpj"]
+[ext_resource type="PackedScene" uid="uid://bi84gc1in6b58" path="res://four_ball.tscn" id="7_ryguw"]
+[ext_resource type="PackedScene" uid="uid://pe0ym77gfjae" path="res://five_ball.tscn" id="8_d13ii"]
+[ext_resource type="PackedScene" uid="uid://bnsrwkmgraj42" path="res://six_ball.tscn" id="9_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://gbb470ilon8w" path="res://seven_ball.tscn" id="10_0odxb"]
+[ext_resource type="PackedScene" uid="uid://dnwq0sjwvtoh6" path="res://black_ball.tscn" id="11_lswn8"]
+[ext_resource type="PackedScene" uid="uid://dh4ajxgddyhvi" path="res://nine_ball.tscn" id="12_a6jrf"]
+[ext_resource type="PackedScene" uid="uid://ccughttjd5wmg" path="res://ten_ball.tscn" id="13_xuqvo"]
+[ext_resource type="PackedScene" uid="uid://iji6h8kink3u" path="res://eleven_ball.tscn" id="14_qsp4k"]
+[ext_resource type="PackedScene" uid="uid://clt3husvi5ug1" path="res://twelve_ball.tscn" id="15_kq58d"]
+[ext_resource type="PackedScene" uid="uid://bikyaq66dj6y5" path="res://thirteen_ball.tscn" id="16_seu75"]
+[ext_resource type="PackedScene" uid="uid://b5fnij7lmmppu" path="res://fourteen_ball.tscn" id="17_htxhm"]
+[ext_resource type="PackedScene" uid="uid://3jbeoaaprys" path="res://fifteen_ball.tscn" id="18_jq2sk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ok6jj"]
+friction = 0.3
+bounce = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_facbu"]
+friction = 0.5
+bounce = 0.3
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_82xsv"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_getpj"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ryguw"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d13ii"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1u8w0"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0odxb"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lswn8"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a6jrf"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xuqvo"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qsp4k"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kq58d"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_seu75"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_htxhm"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jq2sk"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4k2k6"]
+friction = 0.2
+bounce = 0.5
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0rl1p"]
+friction = 0.2
+bounce = 0.5
+
+[node name="Main" type="Node3D" unique_id=1134327034]
+script = ExtResource("1_getpj")
+
+[node name="Cue" type="RigidBody3D" parent="." unique_id=492369976]
+mass = 0.55
+physics_material_override = SubResource("PhysicsMaterial_ok6jj")
+script = ExtResource("1_82xsv")
+
+[node name="pool cue" parent="Cue" unique_id=744996490 instance=ExtResource("2_getpj")]
+transform = Transform3D(1, 0, 0, 0, 0.99838775, -0.05676247, 0, 0.05676247, 0.99838775, -0.00051909685, 0.15619841, -1.2380729)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=225318152]
+physics_material_override = SubResource("PhysicsMaterial_facbu")
+script = ExtResource("1_h2yge")
+
+[node name="pool table" parent="StaticBody3D" unique_id=1171151454 instance=ExtResource("1_ig7tw")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=276506305]
+transform = Transform3D(-1, 8.444392e-08, -2.2626686e-08, -2.552784e-08, -0.03451565, 0.9994042, 8.3612626e-08, 0.9994042, 0.03451565, 0, 2.1008694, 0.08270371)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=740136690]
+transform = Transform3D(1, 0, 0, 0, -0.025705887, 0.99966955, 0, -0.99966955, -0.025705887, 0, 1.5526035, 3.9695737)
+
+[node name="CueBall" parent="." unique_id=745721178 groups=["balls"] instance=ExtResource("3_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002085954, 0.009358067, -0.46628165)
+physics_material_override = SubResource("PhysicsMaterial_82xsv")
+
+[node name="OneBall" parent="." unique_id=13201055 groups=["balls"] instance=ExtResource("4_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00986442, 0.0127290785, 0.7334803)
+physics_material_override = SubResource("PhysicsMaterial_getpj")
+
+[node name="TwoBall" parent="." unique_id=1459931399 groups=["balls"] instance=ExtResource("5_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023710981, 0.013, 0.77113605)
+physics_material_override = SubResource("PhysicsMaterial_ryguw")
+
+[node name="ThreeBall" parent="." unique_id=650602570 groups=["balls"] instance=ExtResource("6_getpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0441439, 0.013, 0.7716099)
+physics_material_override = SubResource("PhysicsMaterial_d13ii")
+
+[node name="FourBall" parent="." unique_id=913598355 groups=["balls"] instance=ExtResource("7_ryguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04687777, 0.013, 0.8142797)
+physics_material_override = SubResource("PhysicsMaterial_1u8w0")
+
+[node name="FiveBall" parent="." unique_id=652653894 groups=["balls"] instance=ExtResource("8_d13ii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069449276, 0.013, 0.8132342)
+physics_material_override = SubResource("PhysicsMaterial_0odxb")
+
+[node name="SixBall" parent="." unique_id=86422238 groups=["balls"] instance=ExtResource("9_1u8w0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08304107, 0.013, 0.85321164)
+physics_material_override = SubResource("PhysicsMaterial_lswn8")
+
+[node name="SevenBall" parent="." unique_id=196383085 groups=["balls"] instance=ExtResource("10_0odxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019139618, 0.013, 0.85155296)
+physics_material_override = SubResource("PhysicsMaterial_a6jrf")
+
+[node name="BlackBall" parent="." unique_id=1692026748 groups=["balls"] instance=ExtResource("11_lswn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012696594, 0.013, 0.8162189)
+physics_material_override = SubResource("PhysicsMaterial_xuqvo")
+
+[node name="NineBall" parent="." unique_id=1013222508 groups=["balls"] instance=ExtResource("12_a6jrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04657416, 0.013, 0.85497034)
+physics_material_override = SubResource("PhysicsMaterial_qsp4k")
+
+[node name="TenBall" parent="." unique_id=513320839 groups=["balls"] instance=ExtResource("13_xuqvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105846435, 0.013, 0.85889196)
+physics_material_override = SubResource("PhysicsMaterial_kq58d")
+
+[node name="ElevenBall" parent="." unique_id=784467934 groups=["balls"] instance=ExtResource("14_qsp4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115767196, 0.013, 0.89743567)
+physics_material_override = SubResource("PhysicsMaterial_seu75")
+
+[node name="TwelveBall" parent="." unique_id=1830567221 groups=["balls"] instance=ExtResource("15_kq58d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04964985, 0.013, 0.8965223)
+physics_material_override = SubResource("PhysicsMaterial_htxhm")
+
+[node name="ThirteenBall" parent="." unique_id=1756538128 groups=["balls"] instance=ExtResource("16_seu75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011346161, 0.013, 0.89709735)
+physics_material_override = SubResource("PhysicsMaterial_jq2sk")
+
+[node name="FourteenBall" parent="." unique_id=1944651057 groups=["balls"] instance=ExtResource("17_htxhm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07454096, 0.013, 0.9005475)
+physics_material_override = SubResource("PhysicsMaterial_4k2k6")
+
+[node name="FifteenBall" parent="." unique_id=626882836 groups=["balls"] instance=ExtResource("18_jq2sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13341025, 0.013, 0.90072066)
+physics_material_override = SubResource("PhysicsMaterial_0rl1p")

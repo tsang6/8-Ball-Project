@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b5fnij7lmmppu"]
+
+[ext_resource type="PackedScene" uid="uid://bg50to1kfrf8u" path="res://Models/fourteen ball.blend" id="1_ijr65"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h2yge"]
+radius = 0.028
+
+[node name="FourteenBall" type="RigidBody3D" unique_id=1944651057]
+mass = 0.165
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=364776217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09222607, 0)
+shape = SubResource("SphereShape3D_h2yge")
+
+[node name="fourteen ball" parent="." unique_id=986937701 instance=ExtResource("1_ijr65")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09200154, 0)
