@@ -112,7 +112,7 @@ script = ExtResource("1_h2yge")
 [node name="pool table" parent="StaticBody3D" unique_id=1171151454 instance=ExtResource("1_ig7tw")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=276506305]
-transform = Transform3D(-1, 8.444392e-08, -2.2626686e-08, -2.552784e-08, -0.03451565, 0.9994042, 8.3612626e-08, 0.9994042, 0.03451565, 0, 2.1008694, 0.08270371)
+transform = Transform3D(-1, -8.742278e-08, 0, -3.821371e-15, 4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, 2.1008694, 0.08270371)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=740136690]
 transform = Transform3D(1, 0, 0, 0, -0.025705887, 0.99966955, 0, -0.99966955, -0.025705887, 0, 1.5526035, 3.9695737)

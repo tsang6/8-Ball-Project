@@ -1,11 +1,10 @@
 extends RigidBody3D
-
 var move_speed = 1
 var rotate_speed = 1
 var charge = 0.0
-var max_force = 5.0
+var max_force = 3.5
 var is_charging = false
-var cue_height = 0.005
+var cue_height = 0.01
 var shot_timer = 0.0
 var shot_fired = false
 var start_position = Vector3.ZERO
@@ -38,7 +37,6 @@ func _physics_process(delta):
 			rotation = start_rotation
 			global_position = start_position
 		return
-
 	var move_dir = Vector3.ZERO
 	if Input.is_key_pressed(KEY_W):
 		move_dir.z += 1
@@ -52,7 +50,6 @@ func _physics_process(delta):
 		global_position += move_dir * move_speed * delta
 		start_position = global_position
 	global_position.y = cue_height
-
 	if Input.is_key_pressed(KEY_LEFT):
 		rotate_y(rotate_speed * delta)
 	if Input.is_key_pressed(KEY_RIGHT):
@@ -60,13 +57,15 @@ func _physics_process(delta):
 	if not Input.is_key_pressed(KEY_LEFT) and not Input.is_key_pressed(KEY_RIGHT):
 		var current_y = rotation.y
 		start_rotation.y = current_y
-
 	if Input.is_key_pressed(KEY_SPACE):
 		is_charging = true
 		charge = min(charge + delta * 3.0, max_force)
 	if not Input.is_key_pressed(KEY_SPACE) and is_charging:
 		freeze = false
-		apply_central_impulse(global_transform.basis.z * charge)
+		var strike_dir = global_transform.basis.z
+		strike_dir.y = 0  # flatten to horizontal
+		strike_dir = strike_dir.normalized()
+		apply_central_impulse(strike_dir * charge)
 		charge = 0.0
 		is_charging = false
 		shot_fired = true
